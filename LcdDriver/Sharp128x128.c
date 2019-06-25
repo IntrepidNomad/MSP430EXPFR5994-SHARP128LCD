@@ -27,7 +27,7 @@
 #include "HAL_MSP_EXP430G2_Sharp128x128.h"
 #elif defined(__MSP430FR4133)
 #include "HAL_MSP_EXP430FR4133_Sharp128x128.h"
-#elif defined(MSP430FR5994)
+#elif defined(__MSP430FR5994)
 #include "HAL_MSP_EXP430FR5994_Sharp128x128.h"
 #include "driverlib.h"
 #endif

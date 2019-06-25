@@ -3,17 +3,17 @@
 // HAL_MSP-EXP430FR5969_Sharp128x128.h - Prototypes for the Sharp128x128
 //                  LCD display driver. There is no output from Sharp128x128 LCD
 //
-//                   MSP430FR5969                 LCD Sharp128x128
+//                   MSP430FR5994                 LCD Sharp128x128
 //                -----------------             -----------------
-//               |     P2.2/UCB0CLK|---------> |SPI_CLK  EXT_MODE|--GND
+//               |     P5.2/UCB0CLK|---------> |SPI_CLK  EXT_MODE|--GND
 //            /|\|                 |           |            	 |
-//             | |    P1.6/UCB0SIMO|---------> |SPI_SI   EXTCOMIN|--GND
+//             | |    P5.0/UCB0SIMO|---------> |SPI_SI   EXTCOMIN|--GND
 //             --|RST              |           |              	 |
-//               |             P2.4|---------> |SPI_CS           |
-//               |             	   |		   |         	     |
-//               |             P4.3|---------> |DISP             |
+//               |             P1.3|---------> |SPI_CS           |
+//               |             	   |		   |   Sharp128x128_initDisplay();      	     |
+//               |             P6.2|---------> |DISP             |
 //               |                 |		   |                 |
-//               |             P4.2|-----*---> |VDD              |
+//               |             P1.2|-----*---> |VDD              |
 //               |                 |      `--> |VDDA             |
 //               |                 |            -----------------
 //                -----------------
@@ -40,16 +40,16 @@
 
 // Pins from MSP430 connected to LCD
 #define LCD_SPI_SI_PIN                      GPIO_PIN0 //
-#define LCD_SPI_SI_PIN_FUNCTION             GPIO_SECONDARY_MODULE_FUNCTION
+#define LCD_SPI_SI_PIN_FUNCTION             GPIO_PRIMARY_MODULE_FUNCTION
 #define LCD_SPI_CLK_PIN                     GPIO_PIN2 //
-#define LCD_SPI_CLK_PIN_FUNCTION            GPIO_SECONDARY_MODULE_FUNCTION
+#define LCD_SPI_CLK_PIN_FUNCTION            GPIO_PRIMARY_MODULE_FUNCTION
 #define LCD_DISP_PIN                        GPIO_PIN2//
 #define LCD_POWER_PIN                       GPIO_PIN2//
 #define LCD_SPI_CS_PIN                      GPIO_PIN3//
 
 
 // Definition of USCI base address to be used for SPI communication
-#define LCD_EUSCI_BASE		      EUSCI_B0_BASE
+#define LCD_EUSCI_BASE		      EUSCI_B1_BASE
 
 
 // Non-volatile Memory used to store DisplayBuffer

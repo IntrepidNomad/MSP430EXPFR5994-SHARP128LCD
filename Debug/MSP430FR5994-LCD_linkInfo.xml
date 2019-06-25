@@ -2,7 +2,7 @@
 <link_info>
    <banner>MSP430 Linker Unix v18.12.2.LTS</banner>
    <copyright>Copyright (c) 2003-2018 Texas Instruments Incorporated</copyright>
-   <link_time>0x5d0d29b9</link_time>
+   <link_time>0x5d129d2b</link_time>
    <link_errors>0x0</link_errors>
    <output_file>MSP430FR5994-LCD.out</output_file>
    <entry_point>
